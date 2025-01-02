@@ -1,0 +1,6 @@
+graph TD;
+    A[Source file ___.c___]-- gcc -E source.c -o source.i -->B[Prepossed file ___.i___]
+    B-- gcc -S source.i -o source.s -->C[Asssembly file ___.s___]
+    C-- gcc -c source.s -o source.o -->D[Object file ___.o___]
+    D-- gcc source.o -o program.exe -->E[Executable file ___.exe___]
+    A-- gcc source.c -o program.exe -->E
